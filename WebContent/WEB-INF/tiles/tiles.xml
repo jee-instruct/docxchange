@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE tiles-definitions PUBLIC   "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+<!--  Master layout Definition -->
+
+<definition name="master.page" template="/WEB-INF/templates/master.jsp">
+<put-attribute name="menu" value="/WEB-INF/templates/menu.jsp"></put-attribute>
+<put-attribute name="title" value=""></put-attribute>
+<put-attribute name="header" value="/WEB-INF/templates/header.jsp"></put-attribute>
+<put-attribute name="body" value=""></put-attribute>
+<put-attribute name="footer" value="/WEB-INF/templates/footer.jsp"></put-attribute>
+</definition>
+
+
+<!--  My Views.. -->
+
+<definition name="index" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/index.jsp"></put-attribute>
+<put-attribute name="title" value="Document Exchange"></put-attribute>
+</definition>
+
+<definition name="search" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/search.jsp"></put-attribute>
+<put-attribute name="title" value="Search Documents"></put-attribute>
+</definition>
+
+<definition name="upload" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/upload.jsp"></put-attribute>
+<put-attribute name="title" value="Upload Documents"></put-attribute>
+</definition>
+
+<definition name="dashboard" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/dashboard.jsp"></put-attribute>
+<put-attribute name="title" value="Dashboard"></put-attribute>
+</definition>
+
+<definition name="error" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/error.jsp"></put-attribute>
+<put-attribute name="title" value="System Error"></put-attribute>
+</definition>
+
+<definition name="contact" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/contact.jsp"></put-attribute>
+<put-attribute name="title" value="Contact"></put-attribute>
+</definition>
+
+<definition name="signin" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/signin.jsp"></put-attribute>
+<put-attribute name="title" value="Signin"></put-attribute>
+</definition>
+
+<definition name="registration" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/registration.jsp"></put-attribute>
+<put-attribute name="title" value="New User Registration"></put-attribute>
+</definition>
+
+<definition name="registrationSubmitted" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/registrationSubmitted.jsp"></put-attribute>
+<put-attribute name="title" value="Registration Submitted"></put-attribute>
+</definition>
+
+<definition name="emailAlreadyRegistered" extends="master.page">
+<put-attribute name="body" value="/WEB-INF/pages/emailAlreadyRegistered.jsp"></put-attribute>
+<put-attribute name="title" value="Email Already Registered"></put-attribute>
+</definition>
+
+
+<!-- Created for only angular autosuggest  only content in this jsp -->
+<definition name="autosuggest" template="/WEB-INF/pages/autosuggest.jsp"/>
+
+
+
+</tiles-definitions>
